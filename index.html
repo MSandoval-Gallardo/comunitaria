@@ -399,6 +399,24 @@
             }
         }
 
+        .subir-share {
+            position: fixed;
+            bottom: 93px;
+            right: 20px;
+            background-color: #B8C4BC40;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: var(--transition);
+        }
         /* Botón de compartir por WhatsApp */
         .whatsapp-share {
             position: fixed;
@@ -448,22 +466,30 @@
             background-color: var(--primary-color);
             color: white;
         }
+        .nota-simple{
+            color: gray;
+        }
     </style>
 </head>
 <body>
     <!-- Encabezado -->
+    <section id="header">
     <header>
         <h1>Villa Nogales de Nos</h1>
         <h2>Información comunitaria y de emergencia</h2>
         <p>Página informativa para los vecinos de Villa Nogales de Nos, comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
+        
     </header>
+    </section>
 
     <!-- Navegación rápida para móviles -->
     <div class="nav-secciones">
         <a href="#emergencias" class="nav-btn">Emergencias</a>
+        <a href="#salud" class="nav-btn">Salud</a>
         <a href="#basura" class="nav-btn">Recolección</a>
         <a href="#mapa" class="nav-btn">Mapa</a>
         <a href="#veterinarias" class="nav-btn">Veterinarias</a>
+        <a href="#transporte" class="nav-btn">Transporte</a>
         <a href="#avisos" class="nav-btn">Avisos</a>
     </div>
 
@@ -614,16 +640,22 @@
             <div class="info-item">
                 <h4>Buses que pasan por Villa Nogales</h4>
                 <div class="horario">
-                    <p><strong>Recorrido G02:</strong></p> 
+                    <p><strong>Recorrido G02:</strong> 
+                    <div class="nota-simple"> Frecuencia aprox. 9-15 min (días hábiles) / 13-20 min (fines de semana).</div> 
+                <div class="nota-simple"> Horario de operación: 05:30 - 23:30 aprox..</div></p> 
                     Catemito / Buenos Aires / América / Nueva Espejino / San José / Av. Portales / Estación Maestranza / Plaza de San Bernardo / Camino Nos - Los Morros / Camino Padre Hurtado.
                 </div>
                 <div class="horario">
-                    <p><strong>Recorrido G14:</strong></p>
+                    <p><strong>Recorrido G14:</strong>
+                    <div class="nota-simple"> Frecuencia aprox. 9-12 min (días hábiles) / 11-16 min (fines de semana).</div>
+                    <div class="nota-simple"> Horario de operación: 05:30 - 22:47 horas (días habiles) / 05:30 a 23:20 horas (fines de semana).</div></p>
                     Camino Padre Hurtado / Almirante Riveros / Eucaliptus / Barros Arana / Colón / Freire / Gran Avenida José Miguel Carrera / Santa Marta.
                 </div>
 
                 <div class="horario">
-                    <p><strong>Recorrido G24:</strong></p>
+                    <p><strong>Recorrido G24:</strong>
+                    <div class="nota-simple">Frecuencia aprox. 8-15 min (días hábiles) / 15 - 20 min (fines de semana)</div>
+                    <div class="nota-simple">Horario de operación: 03:15 a 01:00 (días hábiles) / 03:15 a 23:30 (fines de semana)   </div></p>
                     Camino Padre Hurtado / Metro Hospital el Pino / Vecinal Sur / General Silva / Av. Nueva Imperial / San Francisco / Lo Blanco / Julio Chávez / Julio Barrenechea / San Francisco / Av. Nueva Imperial / General Silva / Vecinal Sur / Padre hurtado / Lo Moreno / Martín de Solís / Av. Lo Blanco / Padre Hurtado. 
 
                 </div>
@@ -631,11 +663,10 @@
             <div class="info-item">
                 <h4>Paraderos principales de la villa</h4>
                 <p> <a href="https://www.google.com/maps/place/PG718-Camino+Padre+Hurtado+%2F+esq.+San+Adolfo/@-33.6423978,-70.6694648,44m/data=!3m1!1e3!4m6!3m5!1s0x9662d85fff096651:0x5ce236718912a8dd!8m2!3d-33.64237!4d-70.66942!16s%2Fg%2F11b6yd6q1h?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-accion secundario"> PG718-Camino Padre Hurtado / esq. San Adolfo</a></p>
-                <p> <a href="https://www.google.com/maps/place/PG711-Camino+Padre+Hurtado+%2F+esq.+San+Adolfo/@-33.6423613,-70.669491,65m/data=!3m1!1e3!4m6!3m5!1s0x9662d8f555f1e693:0xfc2edd3647ecffad!8m2!3d-33.64254!4d-70.66946!16s%2Fg%2F11b6yd4ddz?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-accion secundario"> PG711-Camino Padre Hurtado / esq. San Adolfo </a></p>
-                <p>• Av. Freire con Av. Colón</p>
+                <p> <a href="https://www.google.com/maps/place/PG711-Camino+Padre+Hurtado+%2F+esq.+San+Adolfo/@-33.6423613,-70.669491,65m/data=!3m1!1e3!4m6!3m5!1s0x9662d8f555f1e693:0xfc2edd3647ecffad!8m2!3d-33.64254!4d-70.66946!16s%2Fg%2F11b6yd4ddz?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-accion secundario"> PG711-Camino Padre Hurtado / esq. San Adolfo </a></p>  
             </div>
             <div class="nota">
-                <strong>Nota:</strong> Los horarios son aproximados y pueden variar. Se recomienda consultar aplicaciones de transporte como "Moovit" o "Red" para información en tiempo real.
+                <strong>Nota:</strong> Los horarios y recorridos son aproximados y pueden variar. Se recomienda consultar aplicaciones de transporte como <a href="https://moovitapp.com/es" target="_blank">"Moovit"</a> o <a href="https://www.red.cl" target="_blank"> "Red"</a> para información en tiempo real.
             </div>
         </section>
 
@@ -773,10 +804,18 @@
         <p>Para sugerencias o correcciones: <a href="mailto:contacto@villanogalesdenos.cl" style="color: var(--secondary-color);">contacto@villanogalesdenos.cl</a></p>
     </footer>
 
+    <!-- boton para subir  -->
+    <p>
+        <a href="#header" class="subir-share">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </p>
     <!-- Botón flotante para compartir por WhatsApp -->
-    <a href="https://api.whatsapp.com/send?text=Mira%20esta%20página%20comunitaria%20de%20Villa%20Nogales%20de%20Nos%3A%20" class="whatsapp-share" id="whatsapp-share">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <p>
+        <a href="https://api.whatsapp.com/send?text=Mira%20esta%20página%20comunitaria%20de%20Villa%20Nogales%20de%20Nos%3A%20" class="whatsapp-share" id="whatsapp-share">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </p>
 
     <script>
         // Fecha de actualización automática
