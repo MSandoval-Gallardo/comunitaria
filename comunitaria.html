@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Nogales de Nos - Comunidad San Bernardo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #57cc99;
+            --accent-color: #ff6b6b;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --gray-color: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7fa;
+            padding-bottom: 60px; /* Para que el contenido no quede detrás del footer */
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #e9ecef;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Estilos del contenido principal */
+        main {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos de las secciones */
+        section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 i {
+            color: var(--secondary-color);
+        }
+
+        /* Estilos específicos para la sección de emergencias */
+        #emergencias {
+            background-color: #fff5f5;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        #emergencias h3 {
+            color: var(--accent-color);
+        }
+
+        .emergencia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .emergencia-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e9ecef;
+        }
+
+        .emergencia-item i {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        .emergencia-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .emergencia-numero {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .btn-llamar {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .btn-llamar:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para información general */
+        .info-item {
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .info-item h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-item p {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item .horario {
+            background-color: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border-left: 3px solid var(--secondary-color);
+            margin-top: 0.5rem;
+        }
+
+        .nota {
+            background-color: #fff9db;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #ffd43b;
+        }
+
+        /* Estilos para botones de acción */
+        .btn-accion {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-accion:hover {
+            background-color: #0d4c63;
+            transform: translateY(-2px);
+        }
+
+        .btn-accion.secundario {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-accion.secundario:hover {
+            background-color: #2ca57c;
+        }
+
+        /* Estilos para el mapa */
+        #mapa {
+            height: 400px;
+            width: 100%;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-top: 1rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .mapa-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: #e9ecef;
+            color: var(--gray-color);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .mapa-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Estilos para avisos comunitarios */
+        .avisos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .aviso {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .aviso h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .aviso.fecha {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilos para preguntas frecuentes */
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e9ecef;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-pregunta {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-respuesta {
+            padding: 1rem;
+            display: none;
+            background-color: white;
+        }
+
+        .faq-item.activo .faq-respuesta {
+            display: block;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .legal-info {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .actualizacion {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            header h2 {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 1.2rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .emergencia-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            #mapa {
+                height: 300px;
+            }
+            
+            .avisos-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-accion {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            header h2 {
+                font-size: 1rem;
+            }
+            
+            section {
+                padding: 1rem;
+            }
+        }
+
+        /* Botón de compartir por WhatsApp */
+        .whatsapp-share {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .whatsapp-share:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* Estilos para la navegación entre secciones */
+        .nav-secciones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Villa Nogales de Nos</h1>
+        <h2>Información comunitaria y de emergencia</h2>
+        <p>Página informativa para los vecinos de Villa Nogales de Nos, comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
+    </header>
+
+    <!-- Navegación rápida para móviles -->
+    <div class="nav-secciones">
+        <a href="#emergencias" class="nav-btn">Emergencias</a>
+        <a href="#basura" class="nav-btn">Recolección</a>
+        <a href="#mapa" class="nav-btn">Mapa</a>
+        <a href="#avisos" class="nav-btn">Avisos</a>
+    </div>
+
+    <main>
+        <!-- Sección de Emergencias -->
+        <section id="emergencias">
+            <h3><i class="fas fa-exclamation-triangle"></i> Emergencias</h3>
+            <div class="emergencia-grid">
+                <div class="emergencia-item">
+                    <i class="fa-solid fa-shield"></i>
+                    <h4>Carabineros</h4>
+                    <div class="emergencia-numero">133</div>
+                    <a href="tel:133" class="btn-llamar">Llamar ahora</a>
+                </div>
+                <div class="emergencia-item">
+                    <i class="fas fa-user-secret"></i>
+                    <h4>PDI</h4>
+                    <div class="emergencia-numero">134</div>
+                    <a href="tel:134" class="btn-llamar">Llamar ahora</a>
+                </div>
+                <div class="emergencia-item">
+                    <i class="fas fa-fire-extinguisher"></i>
+                    <h4>Bomberos</h4>
+                    <div class="emergencia-numero">132</div>
+                    <a href="tel:132" class="btn-llamar">Llamar ahora</a>
+                </div>
+                <div class="emergencia-item">
+                    <i class="fas fa-ambulance"></i>
+                    <h4>SAMU / Ambulancia</h4>
+                    <div class="emergencia-numero">131</div>
+                    <a href="tel:131" class="btn-llamar">Llamar ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Recolección de Basura -->
+        <section id="basura">
+            <h3><i class="fas fa-trash-alt"></i> Recolección de Basura</h3>
+            <div class="info-item">
+                <h4><i class="fas fa-calendar-day"></i> Días de retiro</h4>
+                <p>Martes, Jueves y Sábado</p>
+            </div>
+            <div class="info-item">
+                <h4><i class="fas fa-clock"></i> Horario aproximado</h4>
+                <p>Entre las 10:00 y 12:00 horas</p>
+            </div>
+            <!-- <div class="info-item">
+                <h4><i class="fas fa-lightbulb"></i> Recomendaciones</h4>
+                <p>Sacar la basura la noche anterior o antes de las 8:00 AM. Asegurarse de que las bolsas estén bien cerradas y no sobrepasar el peso máximo.</p>
+            </div> -->
+            <div class="nota">
+                <strong>Importante:</strong> Los horarios pueden variar debido a factores climáticos, días feriados o situaciones especiales. Se recomienda sacar la basura con anticipación.
+            </div>
+        </section>
+
+        <!-- Sección de Carabineros -->
+        <section id="carabineros">
+            <h3><i class="fas fa-shield-alt"></i> Carabineros Cercanos</h3>
+            <div class="info-item">
+                <h4>Comisaría San Bernardo</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Colón Sur N° 0713, San Bernardo, Región Metropolitana  </p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228561234">(2) 2856 1234</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 18:00 horas. Atención de emergencias las 24 horas.
+                </div>
+                <a href="tel:+56228561234" class="btn-accion"><i class="fas fa-phone"></i> Llamar</a>
+                <a href="https://www.google.com/maps/place/CARABINEROS+DE+CHILE+PREFECTURA+DEL+MAIPO+62+COMISARIA+SAN+BERNARDO/@-33.5944925,-70.686749,18z/data=!4m6!3m5!1s0x9662d96ed47aacef:0x773077b5d0248e8!8m2!3d-33.5943709!4d-70.6866336!16s%2Fg%2F1hdzzymvp?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt"></i> Ver en mapa</a>
+            </div>
+        </section>
+
+        <!-- Sección de PDI -->
+        <section id="pdi">
+            <h3><i class="fas fa-user-secret"></i> Policía de Investigaciones (PDI)</h3>
+            <div class="info-item">
+                <h4>Brigada de Investigación Criminal San Bernardo</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Eyzaguirre 737, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228569874">(2) 2856 9874</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 17:00 horas.
+                </div>
+                <p><strong>Emergencias PDI:</strong> <a href="tel:134">134</a></p>
+                <a href="tel:+56228569874" class="btn-accion"><i class="fas fa-phone"></i> Llamar</a>
+                <a href="https://maps.google.com/?q=Eyzaguirre 737, San Bernardo" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt"></i> Ver en mapa</a>
+            </div>
+        </section>
+
+        <!-- Sección de Bomberos -->
+        <section id="bomberos">
+            <h3><i class="fas fa-fire-extinguisher"></i> Bomberos</h3>
+            <div class="info-item">
+                <h4>Cuartel General Bomberos San Bernardo</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Portales 4459</p>
+                <div class="horario">
+                    <strong>Atención de emergencias:</strong> Las 24 horas, todos los días.
+                </div>
+                <p><strong>Teléfono de emergencias:</strong> <a href="tel:132">132</a></p>
+                <p><strong>Teléfono administrativo:</strong> <a href="tel:+56228561235">(2) 2856 1235</a></p>
+                <a href="tel:132" class="btn-accion"><i class="fas fa-phone"></i> Emergencias (132)</a>
+                <a href="https://www.google.com/maps/@-33.6389166,-70.7081369,3a,90y,94.61h,86.45t/data=!3m7!1e1!3m5!1sJYqAmREFoTQdvKlwgzqKMw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.547947371715807%26panoid%3DJYqAmREFoTQdvKlwgzqKMw%26yaw%3D94.60558155013182!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt"></i> Ver en mapa</a>
+            </div>
+        </section>
+
+        <!-- Sección de Salud -->
+        <section id="salud">
+            <h3><i class="fas fa-hospital"></i> Salud</h3>
+            <div class="info-item">
+                <h4>CESFAM Villa Nogales</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Nogales 1250, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228564567">(2) 2856 4567</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Lunes a viernes de 8:30 a 17:00 horas. Sábados de 9:00 a 13:00 horas.
+                </div>
+            </div>
+            <div class="info-item">
+                <h4>SAPU San Bernardo</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Freire 850, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228567890">(2) 2856 7890</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Las 24 horas, todos los días.
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Transporte Público -->
+        <section id="transporte">
+            <h3><i class="fas fa-bus"></i> Transporte Público</h3>
+            <div class="info-item">
+                <h4>Buses que pasan por Villa Nogales</h4>
+                <p><strong>Recorrido 301:</strong> San Bernardo - Maipo - Estación Central</p>
+                <p><strong>Recorrido 302:</strong> San Bernardo - Plaza de Armas</p>
+                <p><strong>Recorrido 305:</strong> San Bernardo - La Pintana</p>
+            </div>
+            <div class="info-item">
+                <h4>Paraderos principales</h4>
+                <p>• Av. Nogales con Av. Freire</p>
+                <p>• Av. Nogales con Av. Portales</p>
+                <p>• Av. Freire con Av. Colón</p>
+            </div>
+            <div class="nota">
+                <strong>Nota:</strong> Los horarios son aproximados y pueden variar. Se recomienda consultar aplicaciones de transporte como "Moovit" o "Red" para información en tiempo real.
+            </div>
+        </section>
+
+        <!-- Sección de Servicios Básicos -->
+        <section id="servicios">
+            <h3><i class="fas fa-tools"></i> Servicios Básicos</h3>
+            <div class="info-item">
+                <h4><i class="fas fa-tint"></i> Agua Potable</h4>
+                <p><strong>Empresa:</strong> Aguas Andinas</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:6006003636">600 600 3636</a></p>
+                <a href="https://www.aguasandinas.cl" target="_blank" class="btn-accion">Sitio web</a>
+            </div>
+            <div class="info-item">
+                <h4><i class="fas fa-bolt"></i> Electricidad</h4>
+                <p><strong>Empresa:</strong> Chilectra (Enel)</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:6006960000">600 696 0000</a></p>
+                <a href="https://www.enel.cl" target="_blank" class="btn-accion">Sitio web</a>
+            </div>
+        </section>
+
+        <!-- Sección de Educación -->
+        <section id="educacion">
+            <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
+            <div class="info-item">
+                <h4>Escuela Villa Nogales</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Nogales 950, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228563210">(2) 2856 3210</a></p>
+                <p><strong>Tipo:</strong> Municipal</p>
+            </div>
+            <div class="info-item">
+                <h4>Jardín Infantil Rayito de Sol</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Pasaje Los Nogales 250, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228569876">(2) 2856 9876</a></p>
+                <p><strong>Tipo:</strong> Particular subvencionado</p>
+            </div>
+        </section>
+
+        <!-- Sección de Mapa -->
+        <section id="mapa">
+            <h3><i class="fas fa-map"></i> Mapa de la Zona</h3>
+            <p>Ubicación de Villa Nogales de Nos y puntos de interés en San Bernardo</p>
+            <div id="mapa-container">
+                <div class="mapa-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Mapa de Villa Nogales de Nos</h4>
+                    <p>Este mapa muestra la ubicación de Villa Nogales de Nos en San Bernardo</p>
+                    <p>Para ver el mapa interactivo, haz clic en el siguiente enlace:</p>
+                    <a href="https://maps.google.com/?q=Villa+Nogales+de+Nos,+San+Bernardo,+Chile" target="_blank" class="btn-accion">Ver en Google Maps</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Junta de Vecinos -->
+        <section id="junta">
+            <h3><i class="fas fa-users"></i> Junta de Vecinos</h3>
+            <div class="info-item">
+                <h4>Junta de Vecinos Villa Nogales de Nos</h4>
+                <p><strong>Presidente:</strong> Juan Pérez</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56987654321">9 8765 4321</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:junta@villanogalesdenos.cl">junta@villanogalesdenos.cl</a></p>
+                <div class="horario">
+                    <strong>Reuniones:</strong> Primer miércoles de cada mes a las 19:00 horas en la sede comunitaria (Av. Nogales 1200).
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Avisos Comunitarios -->
+        <section id="avisos">
+            <h3><i class="fas fa-bullhorn"></i> Avisos Comunitarios</h3>
+            <div class="avisos-container">
+                <div class="aviso">
+                    <h4>Operativo de limpieza municipal</h4>
+                    <p class="fecha">15 de noviembre, 2024</p>
+                    <p>El municipio realizará un operativo de limpieza de áreas verdes el próximo sábado. Se solicita a los vecinos no estacionar vehículos en las calles principales.</p>
+                </div>
+                <div class="aviso">
+                    <h4>Corte programado de agua</h4>
+                    <p class="fecha">10 de noviembre, 2024</p>
+                    <p>Aviso de Aguas Andinas: Habrá corte de agua el día 12 de noviembre entre las 9:00 y 14:00 horas por trabajos de mantención.</p>
+                </div>
+                <div class="aviso">
+                    <h4>Feria comunitaria</h4>
+                    <p class="fecha">5 de noviembre, 2024</p>
+                    <p>Este domingo se realizará una feria comunitaria en la plaza central. Habrá puestos de verduras, artesanías y actividades para niños.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Preguntas Frecuentes -->
+        <!-- <section id="faq">
+            <h3><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h3>
+            <div class="faq-item">
+                <div class="faq-pregunta">
+                    <span>¿Qué hacer si no pasó el camión de basura?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">
+                    <p>Si el camión de basura no pasó en el horario habitual, puedes comunicarte con la Dirección de Aseo y Ornato de la Municipalidad de San Bernardo al teléfono (2) 2857 1234. También puedes reportar la situación a través de la aplicación "San Bernardo Muni".</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta">
+                    <span>¿Dónde denunciar ruidos molestos?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">
+                    <p>Las denuncias por ruidos molestos se realizan en Carabineros (133) o en la SEC (Superintendencia de Electricidad y Combustibles) al 600 600 6060 si se trata de establecimientos comerciales. También puedes contactar a la unidad de medio ambiente de la municipalidad.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta">
+                    <span>¿Dónde acudir en una emergencia médica?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">
+                    <p>Para emergencias médicas, llama al SAMU (131) o acude al SAPU más cercano (Av. Freire 850). Si la emergencia es de menor gravedad, puedes acudir al CESFAM Villa Nogales en su horario de atención.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta">
+                    <span>¿Cómo reportar una luminaria dañada?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">
+                    <p>Puedes reportar luminarias dañadas llamando a la Dirección de Tránsito y Ornato de la Municipalidad de San Bernardo al (2) 2857 5678 o a través de la página web del municipio en la sección de "Reportes ciudadanos".</p>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p><strong>Villa Nogales de Nos - Comunidad San Bernardo</strong></p>
+        <p class="legal-info">Esta página es solo informativa y no reemplaza canales oficiales. La información proporcionada puede cambiar y se recomienda verificar con las fuentes oficiales.</p>
+        <p class="actualizacion">Última actualización: <span id="fecha-actualizacion"></span></p>
+        <p>Para sugerencias o correcciones: <a href="mailto:contacto@villanogalesdenos.cl" style="color: var(--secondary-color);">contacto@villanogalesdenos.cl</a></p>
+    </footer>
+
+    <!-- Botón flotante para compartir por WhatsApp -->
+    <a href="https://api.whatsapp.com/send?text=Mira%20esta%20página%20comunitaria%20de%20Villa%20Nogales%20de%20Nos%3A%20" class="whatsapp-share" id="whatsapp-share">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Fecha de actualización automática
+        document.getElementById('fecha-actualizacion').textContent = new Date().toLocaleDateString('es-CL', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+
+        // Funcionalidad para las preguntas frecuentes
+        const faqPreguntas = document.querySelectorAll('.faq-pregunta');
+        faqPreguntas.forEach(pregunta => {
+            pregunta.addEventListener('click', () => {
+                const faqItem = pregunta.parentElement;
+                faqItem.classList.toggle('activo');
+                
+                // Cambiar ícono
+                const icono = pregunta.querySelector('i');
+                if (faqItem.classList.contains('activo')) {
+                    icono.classList.remove('fa-chevron-down');
+                    icono.classList.add('fa-chevron-up');
+                } else {
+                    icono.classList.remove('fa-chevron-up');
+                    icono.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Mejorar el botón de compartir por WhatsApp
+        const whatsappBtn = document.getElementById('whatsapp-share');
+        whatsappBtn.href = `https://api.whatsapp.com/send?text=Mira%20esta%20página%20comunitaria%20de%20Villa%20Nogales%20de%20Nos%20(San%20Bernardo)%3A%20${encodeURIComponent(window.location.href)}`;
+
+        // Simulación de carga de datos desde JSON
+        // En una implementación real, esto cargaría desde un archivo JSON externo
+        const datosComunidad = {
+            "nombre": "Villa Nogales de Nos",
+            "comuna": "San Bernardo",
+            "actualizacion": new Date().toISOString().split('T')[0],
+            "emergencias": {
+                "carabineros": "133",
+                "pdi": "134",
+                "bomberos": "132",
+                "samu": "131"
+            }
+        };
+
+        // Guardar en localStorage para simular persistencia de datos
+        localStorage.setItem('datosComunidad', JSON.stringify(datosComunidad));
+
+        // Suavizar el desplazamiento a los anclas
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+         // Simular un mapa interactivo (en una implementación real se usaría Google Maps API)
+        const mapaContainer = document.getElementById('mapa-container');
+        const verMapaBtn = document.querySelector('.btn-accion[href*="maps.google.com"]');
+        
+        if (verMapaBtn) {
+            verMapaBtn.addEventListener('click', function(e) {
+                if (!confirm('Serás redirigido a Google Maps para ver la ubicación exacta de Villa Nogales de Nos. ¿Deseas continuar?')) {
+                    e.preventDefault();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
