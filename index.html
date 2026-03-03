@@ -139,6 +139,9 @@
             margin-bottom: 0.5rem;
             color: var(--dark-color);
         }
+        .emergencia-item span{
+            align-self: flex-end;
+        }
 
         .emergencia-numero {
             font-size: 1.5rem;
@@ -469,6 +472,7 @@
         .nota-simple{
             color: gray;
         }
+        
     </style>
 </head>
 <body>
@@ -503,24 +507,36 @@
                     <h4>Carabineros</h4>
                     <div class="emergencia-numero">133</div>
                     <a href="tel:133" class="btn-llamar">Llamar ahora</a>
+                    <span>
+                        <a href="#carabineros"> ver mas...</a>
+                    </span>
                 </div>
                 <div class="emergencia-item">
                     <i class="fas fa-user-secret"></i>
                     <h4>PDI</h4>
                     <div class="emergencia-numero">134</div>
                     <a href="tel:134" class="btn-llamar">Llamar ahora</a>
+                    <span>
+                        <a href="#pdi"> ver mas...</a>
+                    </span>
                 </div>
                 <div class="emergencia-item">
                     <i class="fas fa-fire-extinguisher"></i>
                     <h4>Bomberos</h4>
                     <div class="emergencia-numero">132</div>
                     <a href="tel:132" class="btn-llamar">Llamar ahora</a>
+                    <span>
+                        <a href="#bomberos"> ver mas...</a>
+                    </span>
                 </div>
                 <div class="emergencia-item">
                     <i class="fas fa-ambulance"></i>
                     <h4>SAMU / Ambulancia</h4>
                     <div class="emergencia-numero">131</div>
                     <a href="tel:131" class="btn-llamar">Llamar ahora</a>
+                    <span>
+                        <a href="#salud"> ver mas...</a>
+                    </span>
                 </div>
             </div>
         </section>
@@ -584,11 +600,41 @@
                 </div>
             </div>
             <div class="info-item">
-                <h4>SAPU San Bernardo</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Av. Freire 850, San Bernardo</p>
-                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228567890">(2) 2856 7890</a></p>
+                <h4>CESFAM Padre Joan Alsina</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Fernando Márquez de La Plata 5, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56225766050">(2) 25766050</a></p>
                 <div class="horario">
-                    <strong>Horario de atención:</strong> Las 24 horas, todos los días.
+                    <strong>Horario de atención:</strong> Lunes a jueves de 8:00 a 17:00 horas.
+                </div>
+            </div>
+            <div class="info-item">
+                <h4>CESFAM y SAPU Raúl Brañes Farmer</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Condell 1036, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56224816654">(2) 24816654</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Lunes a jueves: de 17:00 hasta el día siguiente.
+                        Viernes de: 16:00 hasta el día siguiente.
+                        Sábado Domingo y Festivos: 24 horas.
+                </div>
+            </div>
+            <div class="info-item">
+                <h4>Centro Médico Integramedica</h4>
+                <p><i class="fas fa-map-marker-alt"></i> mall plaza sur, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56226366666">(2) 2636 6666</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Lunes a viernes: de 8:00 a 20:00.
+                        Sábado de 7:30 a 19:30 horas.
+                        Domingo de 7:30 a 14:00 horas.
+                </div>
+            </div>
+            <div class="info-item">
+                <h4>Clínica Policenter</h4>
+                <p><i class="fas fa-map-marker-alt"></i> O'Higgins 237, San Bernardo</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56223933000">(2) 2393 3000</a></p>
+                <div class="horario">
+                    <strong>Horario de atención:</strong> Lunes a viernes: de 7:00 a 20:00.
+                        Sábado de 8:00 a 14:00 horas.
+                        Domingo de 8:00 a 13:00 horas.
                 </div>
             </div>
         </section>
@@ -640,22 +686,22 @@
             <div class="info-item">
                 <h4>Buses que pasan por Villa Nogales</h4>
                 <div class="horario">
-                    <p><strong>Recorrido G02:</strong> 
+                    <p><strong> Recorrido G02:</strong> 
                     <div class="nota-simple"> Frecuencia aprox. 9-15 min (días hábiles) / 13-20 min (fines de semana).</div> 
-                <div class="nota-simple"> Horario de operación: 05:30 - 23:30 aprox..</div></p> 
+                <div class="nota-simple"> Horario: 05:30 - 23:30 aprox.</div></p> 
                     Catemito / Buenos Aires / América / Nueva Espejino / San José / Av. Portales / Estación Maestranza / Plaza de San Bernardo / Camino Nos - Los Morros / Camino Padre Hurtado.
                 </div>
                 <div class="horario">
                     <p><strong>Recorrido G14:</strong>
                     <div class="nota-simple"> Frecuencia aprox. 9-12 min (días hábiles) / 11-16 min (fines de semana).</div>
-                    <div class="nota-simple"> Horario de operación: 05:30 - 22:47 horas (días habiles) / 05:30 a 23:20 horas (fines de semana).</div></p>
+                    <div class="nota-simple"> Horario: 05:30 - 22:47 horas (días habiles) / 05:30 a 23:20 horas (fines de semana) aprox.</div></p>
                     Camino Padre Hurtado / Almirante Riveros / Eucaliptus / Barros Arana / Colón / Freire / Gran Avenida José Miguel Carrera / Santa Marta.
                 </div>
 
                 <div class="horario">
                     <p><strong>Recorrido G24:</strong>
-                    <div class="nota-simple">Frecuencia aprox. 8-15 min (días hábiles) / 15 - 20 min (fines de semana)</div>
-                    <div class="nota-simple">Horario de operación: 03:15 a 01:00 (días hábiles) / 03:15 a 23:30 (fines de semana)   </div></p>
+                    <div class="nota-simple">Frecuencia aprox. 8-15 min (días hábiles) / 15 - 20 min (fines de semana).</div>
+                    <div class="nota-simple">Horario: 03:15 a 01:00 (días hábiles) / 03:15 a 23:30 (fines de semana) aprox.   </div></p>
                     Camino Padre Hurtado / Metro Hospital el Pino / Vecinal Sur / General Silva / Av. Nueva Imperial / San Francisco / Lo Blanco / Julio Chávez / Julio Barrenechea / San Francisco / Av. Nueva Imperial / General Silva / Vecinal Sur / Padre hurtado / Lo Moreno / Martín de Solís / Av. Lo Blanco / Padre Hurtado. 
 
                 </div>
@@ -676,14 +722,14 @@
             <div class="info-item">
                 <h4><i class="fas fa-tint"></i> Agua Potable</h4>
                 <p><strong>Empresa:</strong> Aguas Andinas</p>
-                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:6006003636">600 600 3636</a></p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:*8000">*8000</a></p>
                 <a href="https://www.aguasandinas.cl" target="_blank" class="btn-accion">Sitio web</a>
             </div>
             <div class="info-item">
                 <h4><i class="fas fa-bolt"></i> Electricidad</h4>
-                <p><strong>Empresa:</strong> Chilectra (Enel)</p>
-                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:6006960000">600 696 0000</a></p>
-                <a href="https://www.enel.cl" target="_blank" class="btn-accion">Sitio web</a>
+                <p><strong>Empresa:</strong> CGE</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:800800767">800 800 767</a></p>
+                <a href="https://www.cge.cl/" target="_blank" class="btn-accion">Sitio web</a>
             </div>
         </section>
 
@@ -719,7 +765,7 @@
         </section>
 
         <!-- Sección de Junta de Vecinos -->
-        <section id="junta">
+        <!-- <section id="junta">
             <h3><i class="fas fa-users"></i> Junta de Vecinos</h3>
             <div class="info-item">
                 <h4>Junta de Vecinos Villa Nogales de Nos</h4>
@@ -730,14 +776,14 @@
                     <strong>Reuniones:</strong> Primer miércoles de cada mes a las 19:00 horas en la sede comunitaria (Av. Nogales 1200).
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Sección de Avisos Comunitarios -->
         <section id="avisos">
             <h3><i class="fas fa-bullhorn"></i> Avisos Comunitarios</h3>
             <div class="avisos-container">
                 <div class="aviso">
-                    <h4>Operativo de limpieza municipal</h4>
+                    <h4>Reciclaje</h4>
                     <p class="fecha">15 de noviembre, 2024</p>
                     <p>El municipio realizará un operativo de limpieza de áreas verdes el próximo sábado. Se solicita a los vecinos no estacionar vehículos en las calles principales.</p>
                 </div>
