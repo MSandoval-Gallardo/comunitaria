@@ -6,491 +6,9 @@
     <title>Villa Nogales de Nos - Comunidad San Bernardo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #1a5f7a;
-            --secondary-color: #57cc99;
-            --accent-color: #ff6b6b;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-            --gray-color: #6c757d;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            background-color: #f5f7fa;
-            padding-bottom: 60px; /* Para que el contenido no quede detrás del footer */
-        }
-
-        /* Estilos del encabezado */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            border-bottom: 5px solid var(--secondary-color);
-        }
-
-        header h1 {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        header h2 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            color: #e9ecef;
-        }
-
-        header p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        /* Estilos del contenido principal */
-        main {
-            padding: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Estilos de las secciones */
-        section {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-
-        section:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        h3 {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--primary-color);
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--secondary-color);
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h3 i {
-            color: var(--secondary-color);
-        }
-
-        /* Estilos específicos para la sección de emergencias */
-        #emergencias {
-            background-color: #fff5f5;
-            border-left: 5px solid var(--accent-color);
-        }
-
-        #emergencias h3 {
-            color: var(--accent-color);
-        }
-
-        .emergencia-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .emergencia-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 1rem;
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e9ecef;
-        }
-
-        .emergencia-item i {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
-            color: var(--accent-color);
-        }
-
-        .emergencia-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark-color);
-        }
-        .emergencia-item span{
-            align-self: flex-end;
-            padding: 20px;;
-        }
-
-        .emergencia-numero {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        .btn-llamar {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: var(--transition);
-            width: 100%;
-            max-width: 200px;
-        }
-
-        .btn-llamar:hover {
-            background-color: #ff5252;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Estilos para información general */
-        .info-item {
-            margin-bottom: 1.2rem;
-            padding-bottom: 1.2rem;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .info-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .info-item h4 {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .fa-solid{
-            /* font-size: 1.1rem; */
-            color: var(--primary-color);
-        }
-        .fas{
-            /* font-size: 1.1rem; */
-            color: var(--primary-color);
-        }
-
-        .info-item p {
-            margin-bottom: 0.5rem;
-        }
-
-        .info-item .horario {
-            background-color: #f8f9fa;
-            padding: 0.5rem;
-            border-radius: 5px;
-            border-left: 3px solid var(--secondary-color);
-            margin-top: 0.5rem;
-        }
-
-        .nota {
-            background-color: #fff9db;
-            padding: 0.8rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            border-left: 3px solid #ffd43b;
-        }
-
-        /* Estilos para botones de acción */
-        .btn-accion {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 0.7rem 1.2rem;
-            border-radius: var(--border-radius);
-            font-weight: 500;
-            transition: var(--transition);
-            margin-top: 0.5rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .btn-accion:hover {
-            background-color: #0d4c63;
-            transform: translateY(-2px);
-        }
-
-        .btn-accion.secundario {
-            background-color: var(--secondary-color);
-        }
-
-        .btn-accion.secundario:hover {
-            background-color: #2ca57c;
-        }
-
-        /* Estilos para el mapa */
-        #mapa {
-            height: 400px;
-            width: 100%;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            margin-top: 1rem;
-            border: 1px solid #dee2e6;
-        }
-
-        .mapa-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            background-color: #e9ecef;
-            color: var(--gray-color);
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .mapa-placeholder i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        /* Estilos para avisos comunitarios */
-        .avisos-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        .aviso {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .aviso h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .aviso.fecha {
-            font-size: 0.9rem;
-            color: var(--gray-color);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Estilos para preguntas frecuentes */
-        .faq-item {
-            margin-bottom: 1rem;
-            border: 1px solid #e9ecef;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-        }
-
-        .faq-pregunta {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-respuesta {
-            padding: 1rem;
-            display: none;
-            background-color: white;
-        }
-
-        .faq-item.activo .faq-respuesta {
-            display: block;
-        }
-
-        /* Estilos para el pie de página */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-
-        .legal-info {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .actualizacion {
-            margin-top: 1.5rem;
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            header h2 {
-                font-size: 1.1rem;
-            }
-            
-            section {
-                padding: 1.2rem;
-            }
-            
-            h3 {
-                font-size: 1.3rem;
-            }
-            
-            .emergencia-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            #mapa {
-                height: 300px;
-            }
-            
-            .avisos-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn-accion {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.6rem;
-            }
-            
-            header h2 {
-                font-size: 1rem;
-            }
-            
-            section {
-                padding: 1rem;
-            }
-        }
-
-        .subir-share {
-            position: fixed;
-            bottom: 93px;
-            right: 20px;
-            background-color: #B8C4BC40;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 28px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            transition: var(--transition);
-        }
-        /* Botón de compartir por WhatsApp */
-        .whatsapp-share {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 28px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            transition: var(--transition);
-        }
-
-        .whatsapp-share:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
-
-        /* Estilos para la navegación entre secciones */
-        .nav-secciones {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            justify-content: center;
-        }
-
-        .nav-btn {
-            background-color: white;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        .nota-simple{
-            color: gray;
-        }
-        .info-item img{
-            width: 80%;
-        }
-        .tac{
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<>
     <!-- Encabezado -->
     <section id="header">
     <header>
@@ -505,11 +23,12 @@
     <div class="nav-secciones">
         <a href="#emergencias" class="nav-btn">Emergencias</a>
         <a href="#salud" class="nav-btn">Salud</a>
-        <a href="#basura" class="nav-btn">Recolección</a>
-        <a href="#mapa" class="nav-btn">Mapa</a>
         <a href="#veterinarias" class="nav-btn">Veterinarias</a>
+        <a href="#basura" class="nav-btn">Recolección</a>
         <a href="#transporte" class="nav-btn">Transporte</a>
-        <a href="#avisos" class="nav-btn">Avisos</a>
+        <a href="#servicios" class="nav-btn">Servicios Básicos</a>
+        <a href="#mapa" class="nav-btn">Mapa</a>
+        <a href="#deportes" class="nav-btn">Deportes</a>
     </div>
 
     <main>
@@ -566,8 +85,8 @@
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 18:00 horas. Atención de emergencias las 24 horas.
                 </div>
-                <a href="tel:+56228561234" class="btn-accion"><i class="fas fa-phone"></i> Llamar</a>
-                <a href="https://www.google.com/maps/place/CARABINEROS+DE+CHILE+PREFECTURA+DEL+MAIPO+62+COMISARIA+SAN+BERNARDO/@-33.5944925,-70.686749,18z/data=!4m6!3m5!1s0x9662d96ed47aacef:0x773077b5d0248e8!8m2!3d-33.5943709!4d-70.6866336!16s%2Fg%2F1hdzzymvp?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt"></i> Ver en mapa</a>
+                <a href="tel:+56228561234" class="btn-accion"><i class="fas fa-phone btn-style"></i> Llamar</a>
+                <a href="https://www.google.com/maps/place/CARABINEROS+DE+CHILE+PREFECTURA+DEL+MAIPO+62+COMISARIA+SAN+BERNARDO/@-33.5944925,-70.686749,18z/data=!4m6!3m5!1s0x9662d96ed47aacef:0x773077b5d0248e8!8m2!3d-33.5943709!4d-70.6866336!16s%2Fg%2F1hdzzymvp?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt btn-style "></i> Ver en mapa</a>
             </div>
         </section>
 
@@ -582,8 +101,8 @@
                     <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 17:00 horas.
                 </div>
                 <p><strong>Emergencias PDI:</strong> <a href="tel:134">134</a></p>
-                <a href="tel:+56228569874" class="btn-accion"><i class="fas fa-phone"></i> Llamar</a>
-                <a href="https://maps.google.com/?q=Eyzaguirre 737, San Bernardo" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt"></i> Ver en mapa</a>
+                <a href="tel:+56228569874" class="btn-accion"><i class="fas fa-phone btn-style"></i> Llamar</a>
+                <a href="https://maps.google.com/?q=Eyzaguirre 737, San Bernardo" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt btn-style"></i> Ver en mapa</a>
             </div>
         </section>
 
@@ -598,8 +117,8 @@
                 </div>
                 <p><strong>Teléfono de emergencias:</strong> <a href="tel:132">132</a></p>
                 <p><strong>Teléfono administrativo:</strong> <a href="tel:+56228561235">(2) 2856 1235</a></p>
-                <a href="tel:132" class="btn-accion"><i class="fas fa-phone"></i> Emergencias (132)</a>
-                <a href="https://www.google.com/maps/@-33.6389166,-70.7081369,3a,90y,94.61h,86.45t/data=!3m7!1e1!3m5!1sJYqAmREFoTQdvKlwgzqKMw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.547947371715807%26panoid%3DJYqAmREFoTQdvKlwgzqKMw%26yaw%3D94.60558155013182!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt"></i> Ver en mapa</a>
+                <a href="tel:132" class="btn-accion"><i class="fas fa-phone  btn-style"></i> Llamar</a>
+                <a href="https://www.google.com/maps/@-33.6389166,-70.7081369,3a,90y,94.61h,86.45t/data=!3m7!1e1!3m5!1sJYqAmREFoTQdvKlwgzqKMw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.547947371715807%26panoid%3DJYqAmREFoTQdvKlwgzqKMw%26yaw%3D94.60558155013182!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt btn-style"></i> Ver en mapa</a>
             </div>
         </section>
 
@@ -643,13 +162,12 @@
                 </div>
             </div>
             <div class="info-item">
-                <h4>Clínica Policenter</h4>
-                <p><i class="fas fa-map-marker-alt"></i> O'Higgins 237, San Bernardo</p>
-                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56223933000">(2) 2393 3000</a></p>
+                <h4>Centro Médico y Dental Betannia</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Urmeneta 843, San Bernardo, Región Metropolitana</p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228135605">(2) 2813 5605</a></p>
                 <div class="horario">
-                    <strong>Horario de atención:</strong> Lunes a viernes: de 7:00 a 20:00.
-                        Sábado de 8:00 a 14:00 horas.
-                        Domingo de 8:00 a 13:00 horas.
+                    <strong>Horario de atención:</strong> Lunes a viernes: de 8:30 a 19:00
+                        Sábado de 10:00 a 14:00 horas.
                 </div>
             </div>
         </section>
@@ -704,7 +222,7 @@
                     <!-- </div>
                     <div class="info-item"> -->
                         <h4><i class="fas fa-clock"></i>¿Qué puedo reciclar?</h4>
-                        <p><i class="fa-solid fa-box-open"></i> Carton, <i class="fa-solid fa-wine-glass-empty"></i> Vidrio y <i class="fa-solid fa-bottle-water"></i> Plástico</p>
+                        <p><i class="fa-solid fa-box-open"></i> Carton - <i class="fa-solid fa-wine-glass-empty"></i> Vidrio - <i class="fa-solid fa-bottle-water"></i> Plástico</p>
                     </div>
                     <div class="tac">
                         <img src="/img/tachos.jpg" alt="tachos">
@@ -756,17 +274,17 @@
                 <h4><i class="fas fa-tint"></i> Agua Potable</h4>
                 <p><strong>Empresa:</strong> Aguas Andinas</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:*8000">*8000</a></p>
-                <a href="https://www.aguasandinas.cl" target="_blank" class="btn-accion">Sitio web</a>
+                <a href="https://www.aguasandinas.cl" target="_blank" class="btn-accion"> <i class="fa-solid fa-globe btn-style"></i> Sitio web</a>
             </div>
             <div class="info-item">
                 <h4><i class="fas fa-bolt"></i> Electricidad</h4>
                 <p><strong>Empresa:</strong> CGE</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:800800767">800 800 767</a></p>
-                <a href="https://www.cge.cl/" target="_blank" class="btn-accion">Sitio web</a>
+                <a href="https://www.cge.cl/" target="_blank" class="btn-accion"> <i class="fa-solid fa-globe btn-style"></i> Sitio web</a>
             </div>
         </section>
 
-        <!-- Sección de Educación -->
+        <!-- Sección de Educación
         <section id="educacion">
             <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
             <div class="info-item">
@@ -781,7 +299,7 @@
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228569876">(2) 2856 9876</a></p>
                 <p><strong>Tipo:</strong> Particular subvencionado</p>
             </div>
-        </section>
+        </section> -->
 
         <!-- Sección de Mapa -->
         <section id="mapa">
@@ -811,24 +329,45 @@
             </div>
         </section> -->
 
-        <!-- Sección de Avisos Comunitarios -->
-        <section id="avisos">
-            <h3><i class="fas fa-bullhorn"></i> Avisos Comunitarios</h3>
+        <!-- Sección de deportes Comunitarios -->
+        <section id="deportes">
+            <h3><i class="fas fa-bullhorn"></i> Avisos Deportivos</h3>
+
+            <div class="nota">
+                <div class="nota-simple">Información obtenida desde el Grupo de whatsapp. Ante cualquier modificación favor comunicar para actualizar.</div>
+                <h3>info. del Grupo</h3>
+                <p>Estimados vecinos, les informamos que mañana inician oficialmente los entrenamientos en la cancha San José de Azapa. Por favor, asistan en los días y horarios asignados a cada equipo.</p>
+                <strong><p>💰 Información sobre Cuotas</p></strong>
+                <p>Para mantener y mejorar nuestros implementos, se establece lo siguiente:
+                Valor: $500 pesos mensuales por cada deporte inscrito.
+                Ejemplo: Si un niño participa en 3 deportes, el total mensual será de $1.500 ($500 por cada uno).</p>
+                <p>Uso del fondo: El dinero recaudado se invertirá exclusivamente en implementos para el deporte respectivo.
+                Inicio de cobro: Los pagos se recibirán a partir de mañana.</p>
+                <p>Importante: En caso de retiro voluntario de alguna actividad, no se realizará devolución de dinero.</p>
+🛡️ Seguridad y Responsabilidad
+Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén acompañados por su apoderado durante toda la actividad, para asistir ante cualquier necesidad o emergencia.
+            </div>
             <div class="avisos-container">
                 <div class="aviso">
-                    <h4>Reciclaje</h4>
-                    <p class="fecha">15 de noviembre, 2024</p>
-                    <p>El municipio realizará un operativo de limpieza de áreas verdes el próximo sábado. Se solicita a los vecinos no estacionar vehículos en las calles principales.</p>
+                    <h4>VÓLEIBOL</h4>
+                    <strong><p class="fecha">Martes y Sábado</p></strong>
+                    <p>Equipo 1: 22:00 a 00:00 hrs.</p>
+                    <p>Equipo 2: 21:00 a 22:00 hrs.</p>
+                    <p>Equipo 3: 20:00 a 21:00 hrs.</p> 
+                    </div>
+                    <div class="aviso">
+                    <h4>BABY FÚTBOL</h4>
+                    <strong><p class="fecha">Lunes y Viernes</p></strong>
+                    <p>Equipo 1: 19:00 a 20:00 hrs.
+                    <p>Equipo 2: 20:00 a 21:00 hrs.</p>
+                    <p>Equipo 3: 21:00 a 22:00 hrs.</p>
+                    <p>Equipo 4: 22:00 a 00:00 hrs.</p>
                 </div>
                 <div class="aviso">
-                    <h4>Corte programado de agua</h4>
-                    <p class="fecha">10 de noviembre, 2024</p>
-                    <p>Aviso de Aguas Andinas: Habrá corte de agua el día 12 de noviembre entre las 9:00 y 14:00 horas por trabajos de mantención.</p>
-                </div>
-                <div class="aviso">
-                    <h4>Feria comunitaria</h4>
-                    <p class="fecha">5 de noviembre, 2024</p>
-                    <p>Este domingo se realizará una feria comunitaria en la plaza central. Habrá puestos de verduras, artesanías y actividades para niños.</p>
+                    <h4>BÁSQUETBOL</h4>
+                    <strong><p class="fecha">Miércoles y Jueves</p></strong>
+                    <p>Equipo 2: 20:00 a 21:00 hrs.</p>
+                    <p>Equipo 1: 21:00 a 22:00 hrs.</p>
                 </div>
             </div>
         </section>
@@ -896,83 +435,6 @@
         </a>
     </p>
 
-    <script>
-        // Fecha de actualización automática
-        document.getElementById('fecha-actualizacion').textContent = new Date().toLocaleDateString('es-CL', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        });
-
-        // Funcionalidad para las preguntas frecuentes
-        const faqPreguntas = document.querySelectorAll('.faq-pregunta');
-        faqPreguntas.forEach(pregunta => {
-            pregunta.addEventListener('click', () => {
-                const faqItem = pregunta.parentElement;
-                faqItem.classList.toggle('activo');
-                
-                // Cambiar ícono
-                const icono = pregunta.querySelector('i');
-                if (faqItem.classList.contains('activo')) {
-                    icono.classList.remove('fa-chevron-down');
-                    icono.classList.add('fa-chevron-up');
-                } else {
-                    icono.classList.remove('fa-chevron-up');
-                    icono.classList.add('fa-chevron-down');
-                }
-            });
-        });
-
-        // Mejorar el botón de compartir por WhatsApp
-        const whatsappBtn = document.getElementById('whatsapp-share');
-        whatsappBtn.href = `https://api.whatsapp.com/send?text=Mira%20esta%20página%20comunitaria%20de%20Villa%20Nogales%20de%20Nos%20(San%20Bernardo)%3A%20${encodeURIComponent(window.location.href)}`;
-
-        // Simulación de carga de datos desde JSON
-        // En una implementación real, esto cargaría desde un archivo JSON externo
-        const datosComunidad = {
-            "nombre": "Villa Nogales de Nos",
-            "comuna": "San Bernardo",
-            "actualizacion": new Date().toISOString().split('T')[0],
-            "emergencias": {
-                "carabineros": "133",
-                "pdi": "134",
-                "bomberos": "132",
-                "samu": "131"
-            }
-        };
-
-        // Guardar en localStorage para simular persistencia de datos
-        localStorage.setItem('datosComunidad', JSON.stringify(datosComunidad));
-
-        // Suavizar el desplazamiento a los anclas
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-         // Simular un mapa interactivo (en una implementación real se usaría Google Maps API)
-        const mapaContainer = document.getElementById('mapa-container');
-        const verMapaBtn = document.querySelector('.btn-accion[href*="maps.google.com"]');
-        
-        if (verMapaBtn) {
-            verMapaBtn.addEventListener('click', function(e) {
-                if (!confirm('Serás redirigido a Google Maps para ver la ubicación exacta de Villa Nogales de Nos. ¿Deseas continuar?')) {
-                    e.preventDefault();
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
