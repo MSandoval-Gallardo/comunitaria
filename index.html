@@ -141,6 +141,7 @@
         }
         .emergencia-item span{
             align-self: flex-end;
+            padding: 20px;;
         }
 
         .emergencia-numero {
@@ -189,6 +190,14 @@
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+        .fa-solid{
+            /* font-size: 1.1rem; */
+            color: var(--primary-color);
+        }
+        .fas{
+            /* font-size: 1.1rem; */
+            color: var(--primary-color);
         }
 
         .info-item p {
@@ -472,7 +481,13 @@
         .nota-simple{
             color: gray;
         }
-        
+        .info-item img{
+            width: 80%;
+        }
+        .tac{
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -662,22 +677,40 @@
 
          <!-- Sección de Recolección de Basura -->
         <section id="basura">
+
             <h3><i class="fas fa-trash-alt"></i> Recolección de Basura</h3>
-            <div class="info-item">
-                <h4><i class="fas fa-calendar-day"></i> Días de retiro</h4>
-                <p>Martes, Jueves y Sábado</p>
-            </div>
-            <div class="info-item">
-                <h4><i class="fas fa-clock"></i> Horario aproximado</h4>
-                <p>Entre las 10:00 y 12:00 horas</p>
-            </div>
-            <!-- <div class="info-item">
-                <h4><i class="fas fa-lightbulb"></i> Recomendaciones</h4>
-                <p>Sacar la basura la noche anterior o antes de las 8:00 AM. Asegurarse de que las bolsas estén bien cerradas y no sobrepasar el peso máximo.</p>
-            </div> -->
+                <div class="info-item">
+                    <div class="horario">
+                        <h4><i class="fas fa-calendar-day"></i> Días de retiro</h4>
+                        <p>Martes, Jueves y Sábado</p>
+                        <h4><i class="fas fa-clock"></i> Horario aproximado</h4>
+                        <p>Entre las 10:00 y 12:00 horas</p>
+                    </div>
+                </div>
+ 
             <div class="nota">
-                <strong>Importante:</strong> Los horarios pueden variar debido a factores climáticos, días feriados o situaciones especiales. Se recomienda sacar la basura con anticipación.
+                <strong>Importante:</strong> Los horarios pueden variar debido a factores climáticos, días feriados o situaciones especiales.
             </div>
+        </section>
+
+         <!-- Sección de reciclaje -->
+        <section id="reciclaje">
+
+            <h3><i class="fa-solid fa-recycle"></i> Zonas de Reciclaje</h3>
+                <div class="info-item">
+                    <div class="horario">
+                        <h4><i class="fas fa-calendar-day"></i>Recipientes disponibles</h4>
+                        <p>En todas las plazas</p>
+                    <!-- </div>
+                    <div class="info-item"> -->
+                        <h4><i class="fas fa-clock"></i>¿Qué puedo reciclar?</h4>
+                        <p><i class="fa-solid fa-box-open"></i> Carton, <i class="fa-solid fa-wine-glass-empty"></i> Vidrio y <i class="fa-solid fa-bottle-water"></i> Plástico</p>
+                    </div>
+                    <div class="tac">
+                        <img src="/img/tachos.jpg" alt="tachos">
+                    </div>
+                </div>
+                
         </section>
 
         <!-- Sección de Transporte Público -->
@@ -737,8 +770,8 @@
         <section id="educacion">
             <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
             <div class="info-item">
-                <h4>Escuela Villa Nogales</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Av. Nogales 950, San Bernardo</p>
+                <h4>Jardín Junji la playa</h4>
+                <p><i class="fas fa-map-marker-alt"></i>La Playa 2399, San Bernardo, Región Metropolitana</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228563210">(2) 2856 3210</a></p>
                 <p><strong>Tipo:</strong> Municipal</p>
             </div>
