@@ -280,6 +280,7 @@
         }
 
         .aviso {
+            margin-top: 10px;
             background-color: #f8f9fa;
             padding: 1rem;
             border-radius: var(--border-radius);
