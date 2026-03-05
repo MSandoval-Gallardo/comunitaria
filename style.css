@@ -27,8 +27,8 @@
 
         /* Estilos del encabezado */
         header {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: #9fd6ec;
+            color: #171616;
             padding: 1.5rem 1rem;
             text-align: center;
             border-bottom: 5px solid var(--secondary-color);
@@ -45,7 +45,7 @@
             font-size: 1.3rem;
             font-weight: 500;
             margin-bottom: 1rem;
-            color: #e9ecef;
+            color: #0066cd;
         }
 
         header p {
@@ -372,9 +372,9 @@
                 font-size: 1.3rem;
             }
             
-            .emergencia-grid {
+            /* .emergencia-grid {
                 grid-template-columns: 1fr;
-            }
+            } */
             
             #mapa {
                 height: 300px;
