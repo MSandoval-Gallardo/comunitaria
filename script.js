@@ -1,9 +1,9 @@
         // Fecha de actualización automática
-        document.getElementById('fecha-actualizacion').textContent = new Date().toLocaleDateString('es-CL', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        });
+        // document.getElementById('fecha-actualizacion').textContent = new Date().toLocaleDateString('es-CL', {
+        //     day: 'numeric',
+        //     month: 'long',
+        //     year: 'numeric'
+        // });
 
         // Funcionalidad para las preguntas frecuentes
         const faqPreguntas = document.querySelectorAll('.faq-pregunta');
