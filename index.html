@@ -1,23 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa Nogales de Nos - Comunidad San Bernardo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<!-- Encabezado -->
-<section id="header">
-    <header>
-        <img id="emblema" src="/img/emblema.png" alt="emblema">
-        <!-- <h1>Villa Nogales de Nos</h1> -->
-        <h2>Información comunitaria y de emergencia</h2>
-        <p>Página informativa para los vecinos de Villa Nogales de Nos, comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
-        
-    </header>
+    <p><?php
+    $archivo = "cont.txt";
+    $contador = file_get_contents($archivo);
+    $contador++;
+    file_put_contents($archivo, $contador);
+    echo "Visitas: " . $contador;
+    ?>
+    </p>
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Villa Nogales de Nos - Comunidad San Bernardo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- Encabezado -->
+    <section id="header">
+        <header>
+            <img id="emblema" src="/img/emblema.png" alt="emblema">
+            <!-- <h1>Villa Nogales de Nos</h1> -->
+            <h2>Información comunitaria y de emergencia</h2>
+            <p>Página informativa para los vecinos de Villa Nogales de Nos, comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
+
+        </header>
     </section>
+
 
     <!-- Navegación rápida para móviles -->
     <div class="nav-secciones">
@@ -80,7 +90,7 @@
             <h3><i class="fas fa-shield-alt"></i> Carabineros Cercanos</h3>
             <div class="info-item">
                 <h4>Comisaría San Bernardo</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Av. Colón Sur N° 0713, San Bernardo, Región Metropolitana  </p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Colón Sur N° 0713, San Bernardo, Región Metropolitana </p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228561234">(2) 2856 1234</a></p>
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 18:00 horas. Atención de emergencias las 24 horas.
@@ -147,8 +157,8 @@
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56224816654">(2) 24816654</a></p>
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a jueves: de 17:00 hasta el día siguiente.
-                        Viernes de: 16:00 hasta el día siguiente.
-                        Sábado Domingo y Festivos: 24 horas.
+                    Viernes de: 16:00 hasta el día siguiente.
+                    Sábado Domingo y Festivos: 24 horas.
                 </div>
             </div>
             <div class="info-item">
@@ -157,8 +167,8 @@
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56226366666">(2) 2636 6666</a></p>
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a viernes: de 8:00 a 20:00.
-                        Sábado de 7:30 a 19:30 horas.
-                        Domingo de 7:30 a 14:00 horas.
+                    Sábado de 7:30 a 19:30 horas.
+                    Domingo de 7:30 a 14:00 horas.
                 </div>
             </div>
             <div class="info-item">
@@ -167,68 +177,68 @@
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56228135605">(2) 2813 5605</a></p>
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a viernes: de 8:30 a 19:00
-                        Sábado de 10:00 a 14:00 horas.
+                    Sábado de 10:00 a 14:00 horas.
                 </div>
             </div>
         </section>
 
         <section id="veterinarias">
             <h3><i class="fa-solid fa-shield-cat"></i></i>Veterinarias cercanas</h3>
-               <div class="info-item">
+            <div class="info-item">
                 <h4>Clínica Veterinaria Vetcant</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Almte. Riveros 1379, San Bernardo, Región Metropolitana</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56966314463"></a>9 6631 4463</p>
                 <div class="horario">
-                    <strong>Horario:</strong> Lunes a Viernes 10:00 a 19:00 hrs. Sábado. 10:00 a 15:00 hrs. DOMINGOS CERRADO 
+                    <strong>Horario:</strong> Lunes a Viernes 10:00 a 19:00 hrs. Sábado. 10:00 a 15:00 hrs. DOMINGOS CERRADO
                 </div>
-               </div>
-               <div class="info-item">
+            </div>
+            <div class="info-item">
                 <h4>Clínica Veterinaria San Pascual</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Cam. Padre Hurtado 18422, San Bernardo, Región Metropolitana</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56959339288"></a>9 5933 9288</p>
                 <div class="horario">
-                    <strong>Horario:</strong> Abierto todos los dias 
+                    <strong>Horario:</strong> Abierto todos los dias
                 </div>
-               </div>
-           
+            </div>
+
         </section>
 
-         <!-- Sección de Recolección de Basura -->
+        <!-- Sección de Recolección de Basura -->
         <section id="basura">
 
             <h3><i class="fas fa-trash-alt"></i> Recolección de Basura</h3>
-                <div class="info-item">
-                    <div class="horario">
-                        <h4><i class="fas fa-calendar-day"></i> Días de retiro</h4>
-                        <p>Martes, Jueves y Sábado</p>
-                        <h4><i class="fas fa-clock"></i> Horario aproximado</h4>
-                        <p>Entre las 10:00 y 12:00 horas</p>
-                    </div>
+            <div class="info-item">
+                <div class="horario">
+                    <h4><i class="fas fa-calendar-day"></i> Días de retiro</h4>
+                    <p>Martes, Jueves y Sábado</p>
+                    <h4><i class="fas fa-clock"></i> Horario aproximado</h4>
+                    <p>Entre las 10:00 y 12:00 horas</p>
                 </div>
- 
+            </div>
+
             <div class="nota">
                 <strong>Importante:</strong> Los horarios pueden variar debido a factores climáticos, días feriados o situaciones especiales.
             </div>
         </section>
 
-         <!-- Sección de reciclaje -->
+        <!-- Sección de reciclaje -->
         <section id="reciclaje">
 
             <h3><i class="fa-solid fa-recycle"></i> Zonas de Reciclaje</h3>
-                <div class="info-item">
-                    <div class="horario">
-                        <h4><i class="fas fa-calendar-day"></i>Recipientes disponibles</h4>
-                        <p>En todas las plazas</p>
+            <div class="info-item">
+                <div class="horario">
+                    <h4><i class="fas fa-calendar-day"></i>Recipientes disponibles</h4>
+                    <p>En todas las plazas</p>
                     <!-- </div>
                     <div class="info-item"> -->
-                        <h4><i class="fas fa-clock"></i>¿Qué puedo reciclar?</h4>
-                        <p><i class="fa-solid fa-box-open"></i> Carton - <i class="fa-solid fa-wine-glass-empty"></i> Vidrio - <i class="fa-solid fa-bottle-water"></i> Plástico</p>
-                    </div>
-                    <div class="tac">
-                        <img src="/img/tachos.jpg" alt="tachos">
-                    </div>
+                    <h4><i class="fas fa-clock"></i>¿Qué puedo reciclar?</h4>
+                    <p><i class="fa-solid fa-box-open"></i> Carton - <i class="fa-solid fa-wine-glass-empty"></i> Vidrio - <i class="fa-solid fa-bottle-water"></i> Plástico</p>
                 </div>
-                
+                <div class="tac">
+                    <img src="/img/tachos.jpg" alt="tachos">
+                </div>
+            </div>
+
         </section>
 
         <!-- Sección de Transporte Público -->
@@ -237,30 +247,33 @@
             <div class="info-item">
                 <h4>Buses que pasan por Villa Nogales</h4>
                 <div class="horario">
-                    <p><strong> Recorrido G02:</strong> 
-                    <div class="nota-simple"> Frecuencia aprox. 9-15 min (días hábiles) / 13-20 min (fines de semana).</div> 
-                <div class="nota-simple"> Horario: 05:30 - 23:30 aprox.</div></p> 
+                    <p><strong> Recorrido G02:</strong>
+                    <div class="nota-simple"> Frecuencia aprox. 9-15 min (días hábiles) / 13-20 min (fines de semana).</div>
+                    <div class="nota-simple"> Horario: 05:30 - 23:30 aprox.</div>
+                    </p>
                     Catemito / Buenos Aires / América / Nueva Espejino / San José / Av. Portales / Estación Maestranza / Plaza de San Bernardo / Camino Nos - Los Morros / Camino Padre Hurtado.
                 </div>
                 <div class="horario">
                     <p><strong>Recorrido G14:</strong>
                     <div class="nota-simple"> Frecuencia aprox. 9-12 min (días hábiles) / 11-16 min (fines de semana).</div>
-                    <div class="nota-simple"> Horario: 05:30 - 22:47 horas (días habiles) / 05:30 a 23:20 horas (fines de semana) aprox.</div></p>
+                    <div class="nota-simple"> Horario: 05:30 - 22:47 horas (días habiles) / 05:30 a 23:20 horas (fines de semana) aprox.</div>
+                    </p>
                     Camino Padre Hurtado / Almirante Riveros / Eucaliptus / Barros Arana / Colón / Freire / Gran Avenida José Miguel Carrera / Santa Marta.
                 </div>
 
                 <div class="horario">
                     <p><strong>Recorrido G24:</strong>
                     <div class="nota-simple">Frecuencia aprox. 8-15 min (días hábiles) / 15 - 20 min (fines de semana).</div>
-                    <div class="nota-simple">Horario: 03:15 a 01:00 (días hábiles) / 03:15 a 23:30 (fines de semana) aprox.   </div></p>
-                    Camino Padre Hurtado / Metro Hospital el Pino / Vecinal Sur / General Silva / Av. Nueva Imperial / San Francisco / Lo Blanco / Julio Chávez / Julio Barrenechea / San Francisco / Av. Nueva Imperial / General Silva / Vecinal Sur / Padre hurtado / Lo Moreno / Martín de Solís / Av. Lo Blanco / Padre Hurtado. 
+                    <div class="nota-simple">Horario: 03:15 a 01:00 (días hábiles) / 03:15 a 23:30 (fines de semana) aprox. </div>
+                    </p>
+                    Camino Padre Hurtado / Metro Hospital el Pino / Vecinal Sur / General Silva / Av. Nueva Imperial / San Francisco / Lo Blanco / Julio Chávez / Julio Barrenechea / San Francisco / Av. Nueva Imperial / General Silva / Vecinal Sur / Padre hurtado / Lo Moreno / Martín de Solís / Av. Lo Blanco / Padre Hurtado.
 
                 </div>
             </div>
             <div class="info-item">
                 <h4>Paraderos principales de la villa</h4>
                 <p> <a href="https://www.google.com/maps/place/PG718-Camino+Padre+Hurtado+%2F+esq.+San+Adolfo/@-33.6423978,-70.6694648,44m/data=!3m1!1e3!4m6!3m5!1s0x9662d85fff096651:0x5ce236718912a8dd!8m2!3d-33.64237!4d-70.66942!16s%2Fg%2F11b6yd6q1h?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-accion secundario"> PG718-Camino Padre Hurtado / esq. San Adolfo</a></p>
-                <p> <a href="https://www.google.com/maps/place/PG711-Camino+Padre+Hurtado+%2F+esq.+San+Adolfo/@-33.6423613,-70.669491,65m/data=!3m1!1e3!4m6!3m5!1s0x9662d8f555f1e693:0xfc2edd3647ecffad!8m2!3d-33.64254!4d-70.66946!16s%2Fg%2F11b6yd4ddz?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-accion secundario"> PG711-Camino Padre Hurtado / esq. San Adolfo </a></p>  
+                <p> <a href="https://www.google.com/maps/place/PG711-Camino+Padre+Hurtado+%2F+esq.+San+Adolfo/@-33.6423613,-70.669491,65m/data=!3m1!1e3!4m6!3m5!1s0x9662d8f555f1e693:0xfc2edd3647ecffad!8m2!3d-33.64254!4d-70.66946!16s%2Fg%2F11b6yd4ddz?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-accion secundario"> PG711-Camino Padre Hurtado / esq. San Adolfo </a></p>
             </div>
             <div class="nota">
                 <strong>Nota:</strong> Los horarios y recorridos son aproximados y pueden variar. Se recomienda consultar aplicaciones de transporte como <a href="https://moovitapp.com/es" target="_blank">"Moovit"</a> o <a href="https://www.red.cl" target="_blank"> "Red"</a> para información en tiempo real.
@@ -337,27 +350,40 @@
                 <!-- <div class="nota-simple">Información obtenida desde el Grupo de whatsapp. Ante cualquier modificación favor comunicar para actualizar.</div> -->
                 <h3>info. del Grupo</h3>
                 <p>Estimados vecinos, les informamos que mañana inician oficialmente los entrenamientos en la cancha San José de Azapa. Por favor, asistan en los días y horarios asignados a cada equipo.</p>
-                <strong><p>💰 Información sobre Cuotas</p></strong>
+                <strong>
+                    <p>💰 Información sobre Cuotas</p>
+                </strong>
                 <p>Para mantener y mejorar nuestros implementos, se establece lo siguiente:
-                Valor: $500 pesos mensuales por cada deporte inscrito.
-                Ejemplo: Si un niño participa en 3 deportes, el total mensual será de $1.500 ($500 por cada uno).</p>
+                    Valor: $500 pesos mensuales por cada deporte inscrito.
+                    Ejemplo: Si un niño participa en 3 deportes, el total mensual será de $1.500 ($500 por cada uno).</p>
                 <p>Uso del fondo: El dinero recaudado se invertirá exclusivamente en implementos para el deporte respectivo.
-                Inicio de cobro: Los pagos se recibirán a partir de mañana.</p>
+                    Inicio de cobro: Los pagos se recibirán a partir de mañana.</p>
                 <p>Importante: En caso de retiro voluntario de alguna actividad, no se realizará devolución de dinero.</p>
-🛡️ Seguridad y Responsabilidad
-Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén acompañados por su apoderado durante toda la actividad, para asistir ante cualquier necesidad o emergencia.
+                🛡️ Seguridad y Responsabilidad
+                Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén acompañados por su apoderado durante toda la actividad,
+                para asistir ante cualquier necesidad o emergencia.
             </div>
             <div class="avisos-container">
                 <div class="aviso">
                     <h4>VÓLEIBOL</h4>
-                    <strong><p class="fecha">Martes y Sábado</p></strong>
-                    <p>Equipo 3: 20:00 a 21:00 hrs.</p> 
-                    <p>Equipo 2: 21:00 a 22:00 hrs.</p>
-                    <p>Equipo 1: 22:00 a 00:00 hrs.</p>
-                    </div>
-                    <div class="aviso">
+                    <strong>
+                        <p class="fecha">Sábado y Domingo</p>
+                    </strong>
+                    <li>
+                        <p>Benjamin (hasta los 10 años) y Alevín (11 y 12 años): desde las 18:00 a 19:00 hrs.</p>
+                    </li>
+                    <li>
+                        <p>Juvenil (13 a 17 años): desde las 19:00 a 20:00 hrs.</p>
+                    </li>
+                    <li>
+                        <p>Juvenil - Adulto: desde las 20:00 a 22:00 hrs.</p>
+                    </li>
+                </div>
+                <div class="aviso">
                     <h4>BABY FÚTBOL</h4>
-                    <strong><p class="fecha">Lunes y Viernes</p></strong>
+                    <strong>
+                        <p class="fecha">Martes y Jueves</p>
+                    </strong>
                     <p>Equipo 1: 19:00 a 20:00 hrs.
                     <p>Equipo 2: 20:00 a 21:00 hrs.</p>
                     <p>Equipo 3: 21:00 a 22:00 hrs.</p>
@@ -365,7 +391,9 @@ Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén ac
                 </div>
                 <div class="aviso">
                     <h4>BÁSQUETBOL</h4>
-                    <strong><p class="fecha">Miércoles y Jueves</p></strong>
+                    <strong>
+                        <p class="fecha">Lunes y Miércoles</p>
+                    </strong>
                     <p>Equipo 2: 20:00 a 21:00 hrs.</p>
                     <p>Equipo 1: 21:00 a 22:00 hrs.</p>
                 </div>
@@ -419,7 +447,7 @@ Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén ac
         <p><strong>Villa Nogales de Nos - Comunidad San Bernardo</strong></p>
         <p class="legal-info">Esta página es solo informativa y no reemplaza canales oficiales. La información proporcionada puede cambiar y se recomienda verificar con las fuentes oficiales.</p>
         <p class="actualizacion">Última actualización: <span id="fecha-actualizacion"></span></p>
-        <p>Para sugerencias o correcciones: <a href="mailto:webvillanogalesdenos@gmail.com" style="color: var(--secondary-color);">webvillanogalesdenos@villanogalesdenos.cl</a></p>
+        <p>Para sugerencias o correcciones: <a href="mailto:webvillanogalesdenos@gmail.com" style="color: var(--secondary-color);">webvillanogalesdenos@gmail.cl</a></p>
     </footer>
 
     <!-- boton para subir  -->
@@ -436,5 +464,7 @@ Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén ac
     </p>
 
     <script src="script.js"></script>
-</body>
-</html>
+    </body>
+
+
+    </html>
