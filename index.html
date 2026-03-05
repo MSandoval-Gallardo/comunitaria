@@ -8,10 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-    <!-- Encabezado -->
-    <section id="header">
+<!-- Encabezado -->
+<section id="header">
     <header>
-        <h1>Villa Nogales de Nos</h1>
+        <img id="emblema" src="/img/emblema.png" alt="emblema">
+        <!-- <h1>Villa Nogales de Nos</h1> -->
         <h2>Información comunitaria y de emergencia</h2>
         <p>Página informativa para los vecinos de Villa Nogales de Nos, comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
         
@@ -99,7 +100,7 @@
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 17:00 horas.
                 </div>
-                <p><strong>Emergencias PDI:</strong> <a href="tel:134">134</a></p>
+                <!-- <p><strong>Emergencias PDI:</strong> <a href="tel:134">134</a></p> -->
                 <a href="tel:+56228569874" class="btn-accion"><i class="fas fa-phone btn-style"></i> Llamar</a>
                 <a href="https://maps.google.com/?q=Eyzaguirre 737, San Bernardo" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt btn-style"></i> Ver en mapa</a>
             </div>
@@ -111,11 +112,11 @@
             <div class="info-item">
                 <h4>Cuartel General Bomberos San Bernardo</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Portales 4459</p>
+                <!-- <p><strong>Teléfono de emergencias:</strong> <a href="tel:132">132</a></p> -->
+                <p><i class="fas fa-phone"></i>Teléfono administrativo: <a href="tel:+56228561235">(2) 2856 1235</a></p>
                 <div class="horario">
                     <strong>Atención de emergencias:</strong> Las 24 horas, todos los días.
                 </div>
-                <p><strong>Teléfono de emergencias:</strong> <a href="tel:132">132</a></p>
-                <p><strong>Teléfono administrativo:</strong> <a href="tel:+56228561235">(2) 2856 1235</a></p>
                 <a href="tel:132" class="btn-accion"><i class="fas fa-phone  btn-style"></i> Llamar</a>
                 <a href="https://www.google.com/maps/@-33.6389166,-70.7081369,3a,90y,94.61h,86.45t/data=!3m7!1e1!3m5!1sJYqAmREFoTQdvKlwgzqKMw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.547947371715807%26panoid%3DJYqAmREFoTQdvKlwgzqKMw%26yaw%3D94.60558155013182!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn-accion secundario"><i class="fas fa-map-marked-alt btn-style"></i> Ver en mapa</a>
             </div>
@@ -175,10 +176,10 @@
             <h3><i class="fa-solid fa-shield-cat"></i></i>Veterinarias cercanas</h3>
                <div class="info-item">
                 <h4>Clínica Veterinaria Vetcant</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Almte. Riveros 1379,San Bernardo, Región Metropolitana</p>
+                <p><i class="fas fa-map-marker-alt"></i> Almte. Riveros 1379, San Bernardo, Región Metropolitana</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56966314463"></a>9 6631 4463</p>
                 <div class="horario">
-                    <strong>Horario:</strong> Lun a Vie 10 a 19.00 hrs. Sáb. 10 a 15.00 hrs. DOMINGOS CERRADO 
+                    <strong>Horario:</strong> Lunes a Viernes 10:00 a 19:00 hrs. Sábado. 10:00 a 15:00 hrs. DOMINGOS CERRADO 
                 </div>
                </div>
                <div class="info-item">
@@ -302,7 +303,7 @@
 
         <!-- Sección de Mapa -->
         <section id="mapa">
-            <h3><i class="fas fa-map"></i> Mapa de la Zona</h3>
+            <h3><i class="fas fa-map"></i> Mapa de la villa</h3>
             <p>Ubicación de Villa Nogales de Nos y puntos de interés en San Bernardo</p>
             <div id="mapa-container">
                 <div class="mapa-placeholder">
@@ -350,9 +351,9 @@ Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén ac
                 <div class="aviso">
                     <h4>VÓLEIBOL</h4>
                     <strong><p class="fecha">Martes y Sábado</p></strong>
-                    <p>Equipo 1: 22:00 a 00:00 hrs.</p>
-                    <p>Equipo 2: 21:00 a 22:00 hrs.</p>
                     <p>Equipo 3: 20:00 a 21:00 hrs.</p> 
+                    <p>Equipo 2: 21:00 a 22:00 hrs.</p>
+                    <p>Equipo 1: 22:00 a 00:00 hrs.</p>
                     </div>
                     <div class="aviso">
                     <h4>BABY FÚTBOL</h4>
@@ -418,7 +419,7 @@ Menores de edad: Solicitamos obligatoriamente que los niños pequeños estén ac
         <p><strong>Villa Nogales de Nos - Comunidad San Bernardo</strong></p>
         <p class="legal-info">Esta página es solo informativa y no reemplaza canales oficiales. La información proporcionada puede cambiar y se recomienda verificar con las fuentes oficiales.</p>
         <p class="actualizacion">Última actualización: <span id="fecha-actualizacion"></span></p>
-        <p>Para sugerencias o correcciones: <a href="mailto:contacto@villanogalesdenos.cl" style="color: var(--secondary-color);">contacto@villanogalesdenos.cl</a></p>
+        <p>Para sugerencias o correcciones: <a href="mailto:webvillanogalesdenos@gmail.com" style="color: var(--secondary-color);">webvillanogalesdenos@villanogalesdenos.cl</a></p>
     </footer>
 
     <!-- boton para subir  -->
