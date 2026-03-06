@@ -23,7 +23,7 @@
             <img id="emblema" src="/img/emblema.png" alt="emblema">
             <!-- <h1>Villa Nogales de Nos</h1> -->
             <h2>Información comunitaria y de emergencia</h2>
-            <p>Página informativa para los vecinos de Villa Nogales de Nos, comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
+            <p>Página informativa para los vecinos de <strong>Villa Nogales de Nos</strong>, en la comuna de San Bernardo, Chile. Servicio comunitario sin fines comerciales.</p>
 
         </header>
     </section>
@@ -52,7 +52,7 @@
                     <div class="emergencia-numero">133</div>
                     <a href="tel:133" class="btn-llamar">Llamar ahora</a>
                     <span>
-                        <a href="#carabineros"> ver mas...</a>
+                        <a href="#carabineros"> ver más...</a>
                     </span>
                 </div>
                 <div class="emergencia-item">
@@ -61,7 +61,7 @@
                     <div class="emergencia-numero">134</div>
                     <a href="tel:134" class="btn-llamar">Llamar ahora</a>
                     <span>
-                        <a href="#pdi"> ver mas...</a>
+                        <a href="#pdi"> ver más...</a>
                     </span>
                 </div>
                 <div class="emergencia-item">
@@ -70,7 +70,7 @@
                     <div class="emergencia-numero">132</div>
                     <a href="tel:132" class="btn-llamar">Llamar ahora</a>
                     <span>
-                        <a href="#bomberos"> ver mas...</a>
+                        <a href="#bomberos"> ver más...</a>
                     </span>
                 </div>
                 <div class="emergencia-item">
@@ -79,7 +79,7 @@
                     <div class="emergencia-numero">131</div>
                     <a href="tel:131" class="btn-llamar">Llamar ahora</a>
                     <span>
-                        <a href="#salud"> ver mas...</a>
+                        <a href="#salud"> ver más...</a>
                     </span>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                 <div class="horario">
                     <strong>Horario de atención:</strong> Lunes a jueves: de 17:00 hasta el día siguiente.
                     Viernes de: 16:00 hasta el día siguiente.
-                    Sábado Domingo y Festivos: 24 horas.
+                    Sábado, domingo y festivos: 24 horas.
                 </div>
             </div>
             <div class="info-item">
@@ -183,13 +183,13 @@
         </section>
 
         <section id="veterinarias">
-            <h3><i class="fa-solid fa-shield-cat"></i></i>Veterinarias cercanas</h3>
+            <h3><i class="fa-solid fa-shield-cat"></i> Veterinarias cercanas</h3>
             <div class="info-item">
                 <h4>Clínica Veterinaria Vetcant</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Almte. Riveros 1379, San Bernardo, Región Metropolitana</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56966314463"></a>9 6631 4463</p>
                 <div class="horario">
-                    <strong>Horario:</strong> Lunes a Viernes 10:00 a 19:00 hrs. Sábado. 10:00 a 15:00 hrs. DOMINGOS CERRADO
+                    <strong>Horario:</strong> Lunes a Viernes: 10:00 a 19:00 hrs. Sábado: 10:00 a 15:00 hrs. Domingos: cerrado
                 </div>
             </div>
             <div class="info-item">
@@ -197,7 +197,7 @@
                 <p><i class="fas fa-map-marker-alt"></i> Cam. Padre Hurtado 18422, San Bernardo, Región Metropolitana</p>
                 <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+56959339288"></a>9 5933 9288</p>
                 <div class="horario">
-                    <strong>Horario:</strong> Abierto todos los dias
+                    <strong>Horario:</strong> Abierto todos los días
                 </div>
             </div>
 
@@ -232,7 +232,7 @@
                     <!-- </div>
                     <div class="info-item"> -->
                     <h4><i class="fas fa-clock"></i>¿Qué puedo reciclar?</h4>
-                    <p><i class="fa-solid fa-box-open"></i> Carton - <i class="fa-solid fa-wine-glass-empty"></i> Vidrio - <i class="fa-solid fa-bottle-water"></i> Plástico</p>
+                    <p><i class="fa-solid fa-box-open"></i> Cartón - <i class="fa-solid fa-wine-glass-empty"></i> Vidrio - <i class="fa-solid fa-bottle-water"></i> Plástico</p>
                 </div>
                 <div class="tac">
                     <img src="/img/tachos.jpg" alt="tachos">
@@ -249,14 +249,14 @@
                 <div class="horario">
                     <p><strong> Recorrido G02:</strong>
                     <div class="nota-simple"> Frecuencia aprox. 9-15 min (días hábiles) / 13-20 min (fines de semana).</div>
-                    <div class="nota-simple"> Horario: 05:30 - 23:30 aprox.</div>
+                    <div class="nota-simple"> Horario: 05:30 a 23:30 aprox.</div>
                     </p>
                     Catemito / Buenos Aires / América / Nueva Espejino / San José / Av. Portales / Estación Maestranza / Plaza de San Bernardo / Camino Nos - Los Morros / Camino Padre Hurtado.
                 </div>
                 <div class="horario">
                     <p><strong>Recorrido G14:</strong>
                     <div class="nota-simple"> Frecuencia aprox. 9-12 min (días hábiles) / 11-16 min (fines de semana).</div>
-                    <div class="nota-simple"> Horario: 05:30 - 22:47 horas (días habiles) / 05:30 a 23:20 horas (fines de semana) aprox.</div>
+                    <div class="nota-simple"> Horario: 05:30 a 22:47 horas (días hábiles) / 05:30 a 23:20 horas (fines de semana) aprox.</div>
                     </p>
                     Camino Padre Hurtado / Almirante Riveros / Eucaliptus / Barros Arana / Colón / Freire / Gran Avenida José Miguel Carrera / Santa Marta.
                 </div>
