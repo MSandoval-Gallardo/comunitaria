@@ -487,4 +487,12 @@
         #emblema{
             width: 84%;
         }
-    
+        .visit .nfNnt{
+
+            background-color: #343a40;
+            display:none;
+        }
+        .visit{
+            display:flex;
+            align-self: self-end;
+        }

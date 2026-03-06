@@ -1,11 +1,4 @@
-    <p><?php
-    $archivo = "cont.txt";
-    $contador = file_get_contents($archivo);
-    $contador++;
-    file_put_contents($archivo, $contador);
-    echo "Visitas: " . $contador;
-    ?>
-    </p>
+
     <!DOCTYPE html>
     <html lang="es">
 
@@ -16,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <!-- Encabezado -->
     <section id="header">
@@ -384,18 +378,40 @@
                     <strong>
                         <p class="fecha">Martes y Jueves</p>
                     </strong>
-                    <p>Equipo 1: 19:00 a 20:00 hrs.
-                    <p>Equipo 2: 20:00 a 21:00 hrs.</p>
-                    <p>Equipo 3: 21:00 a 22:00 hrs.</p>
-                    <p>Equipo 4: 22:00 a 00:00 hrs.</p>
+                    <li><p>Equipo 1: 19:00 a 20:00 hrs.</p></li>
+                    <li><p>Equipo 2: 20:00 a 21:00 hrs.</p></li>
+                    <li><p>Equipo 3: 21:00 a 22:00 hrs.</p></li>
+                    <li><p>Equipo 4: 22:00 a 00:00 hrs.</p></li>
                 </div>
                 <div class="aviso">
                     <h4>BÁSQUETBOL</h4>
                     <strong>
                         <p class="fecha">Lunes y Miércoles</p>
                     </strong>
-                    <p>Equipo 2: 20:00 a 21:00 hrs.</p>
-                    <p>Equipo 1: 21:00 a 22:00 hrs.</p>
+                    <li><p>Equipo 2: 20:00 a 21:00 hrs.</p></li>
+                    <li><p>Equipo 1: 21:00 a 22:00 hrs.</p></li>
+                </div>
+                 <div class="aviso">
+                    <h4>BOXEO</h4>
+                    <strong>
+                        <p class="fecha">Viernes</p>
+                    </strong>
+                    <p>Lugar: En la sede de la villa que está al lado de la shell</p>
+                    <li><p> Niños a las 19:00 a 20:00 hrs.</p></li>
+                    <li><p>Adultos 20:00 a 21:00</p></li>
+                    <div class="nota">
+                        <p><strong>Llevar:</strong> botella con agua y zapatillas cómodas para trotar y calcetines
+                        que te hagan sentir cómod@ ya que la clase dentro de la sede es sin zapatillas</p>
+                        <p>En la primera clase no será necesario llevar guantes, pero si más Adelante tendrás 
+                        que llevar tus implementos personales:</p>
+                        <ul type="circle">
+                        <li>vendas 
+                        <li>protector bucal 
+                        <li>guantes
+                        <li>protector cabezal
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -442,12 +458,18 @@
         </section> -->
     </main>
 
+    <div class="visit">
+        <!-- Elfsight Visitor Counter | Untitled Visitor Counter -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-8605ae83-fab0-4d76-a6f9-1aa17f32de6d" data-elfsight-app-lazy></div>
+    </div>
     <!-- Pie de página -->
     <footer>
         <p><strong>Villa Nogales de Nos - Comunidad San Bernardo</strong></p>
         <p class="legal-info">Esta página es solo informativa y no reemplaza canales oficiales. La información proporcionada puede cambiar y se recomienda verificar con las fuentes oficiales.</p>
         <!-- <p class="actualizacion">Última actualización: <span id="fecha-actualizacion"></span></p> -->
         <p>Para sugerencias o correcciones: <a href="mailto:webvillanogalesdenos@gmail.com" style="color: var(--secondary-color);">webvillanogalesdenos@gmail.cl</a></p>
+    
     </footer>
 
     <!-- boton para subir  -->
