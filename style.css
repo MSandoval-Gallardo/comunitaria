@@ -490,9 +490,9 @@
         .visit .nfNnt{
 
             background-color: #343a40;
-            display:none;
         }
         .visit{
             display:flex;
+            display:none;
             align-self: self-end;
         }
