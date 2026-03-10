@@ -406,7 +406,7 @@
 
         .subir-share {
             position: fixed;
-            bottom: 93px;
+            bottom: 154px;
             right: 20px;
             background-color: #B8C4BC40;
             color: white;
@@ -425,7 +425,7 @@
         /* Botón de compartir por WhatsApp */
         .whatsapp-share {
             position: fixed;
-            bottom: 20px;
+            bottom: 86px;
             right: 20px;
             background-color: #25D366;
             color: white;
@@ -496,9 +496,9 @@
             display:none;
             align-self: self-end;
         }
-        /* .btn-web{
+        .btn-web{
 position:fixed;
-bottom:90px;
+bottom:23px;
 right:20px;
 background:linear-gradient(45deg,#007bff,#00c6ff);
 color:white;
@@ -515,4 +515,42 @@ z-index:999;
 .btn-web:hover{
 transform:scale(1.05);
 box-shadow:0 8px 20px rgba(0,0,0,0.3);
-} */
+}
+
+.promo-web{
+margin-top:40px;
+padding:30px;
+background:#f8f9fa;
+border-radius:10px;
+text-align:center;
+}
+
+.promo-web h2{
+margin-bottom:15px;
+color:#333;
+}
+
+.promo-web ul{
+list-style:none;
+padding:0;
+margin:20px 0;
+}
+
+.promo-web li{
+margin:8px 0;
+font-size:16px;
+}
+
+.btn-contacto{
+display:inline-block;
+background:#28a745;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-contacto:hover{
+background:#218838;
+}
