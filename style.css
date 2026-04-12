@@ -519,7 +519,10 @@ footer p {
     color: #f7f9fa;
 }
 #emblema{
-    width: 84%;
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Centra la imagen dentro del círculo */
 }
 .visit .nfNnt{
 
@@ -547,6 +550,26 @@ footer p {
 }
 
 .btn-web:hover{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+.btn-flayer{
+    position:fixed;
+    bottom:23px;
+    right:222px;
+    background:linear-gradient(45deg,#007bff,#00c6ff);
+    color:white;
+    padding:14px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    font-family:Arial, sans-serif;
+    transition:transform 0.2s, box-shadow 0.2s;
+    z-index:999;
+}
+
+.btn-flayer:hover{
 transform:scale(1.05);
 box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
@@ -610,6 +633,7 @@ background:#218838;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 30px;
 
 }
 .dpf h3{
@@ -644,4 +668,9 @@ background:#218838;
     }
     #servicio{
         padding-bottom: 0px;
+    }
+    #flayer{
+        width: 19px;
+  height: auto;
+  margin-bottom: -5px;
     }
