@@ -311,6 +311,7 @@ h3 i {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
+    grid-template-columns: 1fr;
 }
 
 .aviso {
@@ -319,13 +320,44 @@ h3 i {
     padding: 1rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.aviso img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.texto{
+    flex: 1;
+    min-width: 250px;
+    padding-left: 20px;
+}
+.titulo-img{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-img h4{
+    margin-bottom:10px;
+    color: var(--primary-color)
 }
 
-.aviso h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+.titulo-img img{
+    /* width:56%;
+    height: auto;
+    margin-left:23%; */
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
-
+/* #futball{
+    width:56%;
+    height: auto;
+    margin-left:23%;
+} */
 .aviso.fecha {
     font-size: 0.9rem;
     color: var(--gray-color);
@@ -388,8 +420,23 @@ footer p {
     opacity: 0.7;
 }
 
+
 /* Responsive design */
 @media (max-width: 768px) {
+    .titulo-img img{
+        margin-left:0;
+    }
+
+    .aviso{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aviso img{
+        width: 100%;
+        max-width: 400px;
+    }
+
     header h1 {
         font-size: 1.8rem;
     }
@@ -412,10 +459,6 @@ footer p {
     
     #mapa {
         height: 300px;
-    }
-    
-    .avisos-container {
-        grid-template-columns: 1fr;
     }
     
     .btn-accion {
