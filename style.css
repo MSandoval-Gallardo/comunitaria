@@ -479,11 +479,34 @@ footer p {
     section {
         padding: 1rem;
     }
+    .emergencia-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+     .btn-llamar{
+        width: 100%;
+        text-align: center;
+    }
+     #mas{
+        width: 100%;
+        text-align: center;
+    }
+    .btn-web{
+       font-size: 13px;
+    }
+    .btn-flayer{
+        font-size: 13px;
+    }
 }
 
 .subir-share {
     position: fixed;
-    bottom: 158px;
+    bottom: 41px;
     right: 20px;
     background-color: #B8C4BC40;
     color: white;
@@ -501,6 +524,7 @@ footer p {
 }
 /* Botón de compartir por WhatsApp */
 .whatsapp-share {
+    display:none;
     position: fixed;
     bottom: 87px;
     right: 20px;
@@ -509,7 +533,7 @@ footer p {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-decoration: none;
