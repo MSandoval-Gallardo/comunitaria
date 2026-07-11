@@ -209,13 +209,14 @@ h3 i {
     border-bottom: none;
 }
 
-.info-item h4 {
+.info-item h4{
     font-size: 1.1rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     gap: 8px;
+    
 }
 .fa-solid{
     /* font-size: 1.1rem; */
@@ -229,7 +230,10 @@ h3 i {
 .info-item p {
     margin-bottom: 0.5rem;
 }
-
+.info-item p a{
+    font-family: 'Roboto', sans-serif;
+text-decoration: none !important;
+}
 .info-item .horario {
     background-color: #f8f9fa;
     padding: 0.5rem;
